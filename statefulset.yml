@@ -4,6 +4,7 @@ metadata:
   name: mysql
 
 spec:
+  serviceName: mysqldb
   replicas: 1
 
   selector:
@@ -43,9 +44,9 @@ spec:
     - metadata:
         name: pvc-1
       spec:
+        storageClassName: gp2
         accessModes:
           - ReadWriteOnce
-        storageClassName: gp2
         resources:
           requests:
             storage: 2Gi
