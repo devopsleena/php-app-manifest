@@ -3,7 +3,7 @@ kind: Service
 metadata:
   name: mysqldb
 spec:
-  type: None
+  type: ClusterIp
   selector:
     app: app-database
   ports:
